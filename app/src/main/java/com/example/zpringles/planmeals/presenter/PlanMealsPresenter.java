@@ -14,6 +14,9 @@ public class PlanMealsPresenter implements PlanPresenterInterface {
 
     private RepositoryFirebaseInterface repositoryFirebaseInterface;
 
+
+
+    // the constructor of the class presenter dealling with askig the repo to fetch for him this data
     public PlanMealsPresenter(RepositoryInterface repositoryInterface,RepositoryFirebaseInterface repositoryFirebaseInterface){
         this.repositoryInterface = repositoryInterface ;
         this.repositoryFirebaseInterface=repositoryFirebaseInterface;

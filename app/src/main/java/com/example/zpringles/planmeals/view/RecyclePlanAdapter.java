@@ -43,6 +43,9 @@ public class RecyclePlanAdapter extends RecyclerView.Adapter<RecyclePlanAdapter.
         Button remove_from_plan;
         ImageButton addToFav;
 
+
+
+        //refrence for all the items by the ID
         public ViewHolder(View v){
             super(v);
             view = v;
@@ -60,12 +63,13 @@ public class RecyclePlanAdapter extends RecyclerView.Adapter<RecyclePlanAdapter.
         list=models;
     }
 
+    // this refrence for the paramtraized constructor
     public RecyclePlanAdapter(Context context, List<MealModel> list,OnPlanClickListner onplanClickListner) {
         this.onplanClickListner=onplanClickListner;
         this.context = context;
         this.list = list;
     }
-
+// infilation to draw the layouts
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -78,6 +82,8 @@ public class RecyclePlanAdapter extends RecyclerView.Adapter<RecyclePlanAdapter.
         this.list.remove(mealModel);
     }
 
+
+    // binding the view with data items
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context).load(list.get(position).getStrMealThumb())

@@ -53,13 +53,15 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
 
     }
 
-
+// infilation for the layouts
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_plan_meals, container, false);
     }
 
+
+    // when the view created tell the presenter i need this data
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -82,7 +84,10 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
           getPlan(6);
 
     }
+
+    // we make the plan from saturday to  friday so we want to connect the array lists od
     void Init(View view){
+        // to show the seven recycler view of the seven days
         recyclerView[0]= view.findViewById(R.id.recyclerSaturday);
         recyclerView[1] = view.findViewById(R.id.recyclerSunday);
         recyclerView[2] = view.findViewById(R.id.recyclerMonday);
@@ -90,6 +95,8 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
         recyclerView[4] = view.findViewById(R.id.recyclerWednesday);
         recyclerView[5] = view.findViewById(R.id.recyclerThursday);
         recyclerView[6] = view.findViewById(R.id.recyclerFriday);
+
+        //to print for each index  each layout
         linearLayoutManager[0]=new LinearLayoutManager(view.getContext());
         linearLayoutManager[1]=new LinearLayoutManager(view.getContext());
         linearLayoutManager[2]=new LinearLayoutManager(view.getContext());
@@ -97,6 +104,7 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
         linearLayoutManager[4]=new LinearLayoutManager(view.getContext());
         linearLayoutManager[5]=new LinearLayoutManager(view.getContext());
         linearLayoutManager[6]=new LinearLayoutManager(view.getContext());
+        //connect the recycler view with adapter
         recyclePlanAdapter[0] = new RecyclePlanAdapter(view.getContext(),new ArrayList<>(),this);
         recyclePlanAdapter[1] = new RecyclePlanAdapter(view.getContext(),new ArrayList<>(),this);
         recyclePlanAdapter[2] = new RecyclePlanAdapter(view.getContext(),new ArrayList<>(),this);
@@ -150,6 +158,9 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
         recyclePlanAdapter[i].notifyDataSetChanged();
     }
 
+
+
+    //implementation on JavaRx to use observation on the main thread and susscribe
     public void getPlan(int i){
         planPresenterInterface.getAllPlanedMeals(daysWeak[i]).subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -166,6 +177,9 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
 
                 });
     }
+
+
+
   void uploadToPlanTFire(String plan,List<MealModel> planList){
       DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference();
       SharedPreferences sharedPreferences = getContext().getSharedPreferences(Helper.SHARDPREFERENCE,getContext().MODE_PRIVATE);

@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/logo1"
+
     tools:context=".view.MainActivity">
 
     <com.google.android.material.bottomappbar.BottomAppBar
@@ -13,25 +15,24 @@
         android:layout_gravity="bottom"
         app:fabCradleMargin="15dp"
         app:fabCradleRoundedCornerRadius="15dp"
-        app:fabCradleVerticalOffset="10dp"/>
+        app:fabCradleVerticalOffset="10dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-         android:id="@+id/bottomNavView"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-        app:itemRippleColor="@color/design_default_color_background"
-        android:layout_marginEnd="16dp"
+        android:id="@+id/bottomNavView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:menu="@menu/bottom_nav_bar"
+        android:layout_marginEnd="16dp"
         android:background="@android:color/transparent"
-        />
+        app:itemRippleColor="@color/design_default_color_background"
+        app:menu="@menu/bottom_nav_bar" />
 
 
     <fragment
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="639dp"
 
         android:layout_marginBottom="54dp"
         app:defaultNavHost="true"
@@ -44,11 +45,12 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingButton"
-        android:layout_width="46dp"
-        android:layout_height="wrap_content"
+        android:layout_width="31dp"
+        android:layout_height="32dp"
         android:layout_margin="20dp"
         android:src="@drawable/calendar_icon"
-        app:backgroundTint="@color/MainButtonBG"
+        android:visibility="invisible"
+        app:backgroundTint="@color/common_google_signin_btn_text_light_default"
         app:layout_anchorGravity="bottom|center"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 

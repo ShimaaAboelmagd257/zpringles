@@ -87,6 +87,21 @@ public  class HomePageFragment extends Fragment implements HomeViewInterface,OnH
         homePagePresenter.getRandomMeal();
         homePagePresenter.getCategoriesList();
         homePagePresenter.getCountriesList();
+        /*
+        to be continued and show random meal  daily inspiretion
+        *   recyclerView = view.findViewById(R.id.myRecView);
+        recyclerView1.setHasFixedSize(true);
+        CarouselLayoutManager layoutManager = new CarouselLayoutManager(CarouselLayoutManager.VERTICAL);
+        layoutManager.setPostLayoutListener(new CarouselZoomPostLayoutListener());
+        layoutManager.setMaxVisibleItems(3);
+        recyclerView.setLayoutManager(layoutManager);
+        presenter = new HomeFragmentPresenter(Repository.getInstance(API_Client.getInstance()
+                , ConcreteLocalSource.getInstance(getContext())
+                , getContext())
+                , this);
+        presenter.getRandomMeals();
+        adapter1 = new HomeFragmentAdapter(HomeFragment.this.getContext(), mealDetails, this);
+        recyclerView1.setAdapter(adapter1);*/
 
         if (favorite != null && favorite.size() != 0 ){
             for (int i=0 ;i<favorite.size() ;i++){
