@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.example.zpringles.home.home.view.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_countriesFragment"
+            app:destination="@id/countriesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planMealsFragment"
+        android:name="com.example.zpringles.planmeals.view.planMealsFragment"
+        android:label="fragment_plan_meals"
+        tools:layout="@layout/fragment_plan_meals" >
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteMealsFragment"
+        android:name="com.example.zpringles.favoritemeals.view.FavoriteMealsFragment"
+        android:label="fragment_favorite_meals"
+        tools:layout="@layout/fragment_favorite_meals" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.zpringles.profile.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.zpringles.search.view.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.zpringles.categories.view.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category" >
+        <argument
+            android:name="cMealName"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_categoryFragment_to_homePageFragment2"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countriesFragment"
+        android:name="com.example.zpringles.countries.view.CountriesFragment"
+        android:label="fragment_countries"
+        tools:layout="@layout/fragment_countries" >
+        <argument
+            android:name="mealName"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_countriesFragment_to_homePageFragment3"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+</navigation>

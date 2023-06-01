@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">zpringles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appname">zpringles</string>
+    <string name="slogin">Like A Chef</string>
+    <string name="fettuccine_alfredo">Fettuccine Alfredo</string>
+    <string name="title_activity_item_page">ItemPageActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="egyp">Egyption</string>
+    <string name="userName">UserName</string>
+    <string name="email">Email</string>
+    <string name="password">password</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="singup">SignUp</string>
+    <string name="or">Or</string>
+    <string name="haveAccount">Have an acount ?</string>
+    <string name="login">Login</string>
+    <string name="forgot">FORGOT  PASSWORD</string>
+    <string name="skip">SKIP</string>
+    <string name="categories">Categories</string>
+    <string name="country">Country</string>
+    <string name="add_meal_to_plan_dialog_title">Choose days to add meal to</string>
+    <string name="daily_inspiration">Daily Inspiration</string>
+    <string name="meals">Meals</string>
+    <string name="ingredient">Ingredient:</string>
+    <string name="_1_2_cup_heavy_cream">1/2 cup Heavy Cream</string>
+    <string name="step">Preheat oven to 350° F. Spray a 9x13-inch baking pan with non-stick spray.\n\nCombine soy sauce, ½ cup water, brown sugar, ginger and garlic in a small saucepan and cover. Bring to a boil over medium heat. Remove lid and cook for one minute once boiling.\n\nMeanwhile, stir together the corn starch and 2 tablespoons of water in a separate dish until smooth. Once sauce is boiling, add mixture to the saucepan and stir to combine. Cook until the sauce starts to thicken then remove from heat.\n\nPlace the chicken breasts in the prepared pan. Pour one cup of the sauce over top of chicken. Place chicken in oven and bake 35 minutes or until cooked through. Remove from oven and shred chicken in the dish using two forks.\n\nMeanwhile, steam or cook the vegetables according to package directions.\n\nAdd the cooked vegetables and rice to the casserole dish with the chicken. Add most of the remaining sauce, reserving a bit to drizzle over the top when serving. Gently toss everything together in the casserole dish until combined. Return to oven and cook 15 minutes. Remove from oven and let stand 5 minutes before serving. Drizzle each serving with remaining sauce.</string>
+    <string name="preparation_video">Preparation Video:</string>
+    <string name="search">Search</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="profileName">Youssef Elbtat</string>
+    <string name="profileemail">yelbtat@gmail.com</string>
+    <string name="logout">Log out</string>
+    <string name="editprofile">Edit Profile</string>
+    <string name="current_password">Current Password</string>
+    <string name="newpassword">New Password</string>
+    <string name="confirmNewPassword">Confirm New Password</string>
+    <string name="plan">Plan Meals</string>
+    <!--Week days-->
+    <string name="saturday">Saturday</string>
+    <string name="sunday">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="wednesday">Wednesday</string>
+    <string name="thursday">Thursday</string>
+    <string name="friday">Friday</string>
+    <string name="favorite">Favorite</string>
+    <string name="EnteryourEmail">Enter your Email</string>
+    <string name="nav_host_fragment">nav_host_fragment</string>
+
+    <string-array name="weekdays">
+        <item>Saturday</item>
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+    </string-array>
+
+    <string-array name="flags">
+        <item>https://www.worldometers.info/img/flags/us-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/uk-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ca-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ch-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/hr-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/nl-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/eg-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/fr-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/gr-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/in-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ei-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/it-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/jm-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ja-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ke-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/my-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/mx-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/mo-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/pl-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/po-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/rs-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/sp-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/th-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/ts-flag.gif</item>
+        <item>https://www.worldometers.info/img/flags/tu-flag.gif</item>
+        <item>https://www.freepnglogos.com/uploads/globe-png/globe-icon-aquanox-icons-softiconsm-34.png</item>
+        <item>https://www.worldometers.info/img/flags/vm-flag.gif</item>
+    </string-array>
+</resources>
