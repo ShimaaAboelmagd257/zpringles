@@ -6,12 +6,12 @@ import com.example.zpringles.model.modelFirebase.UserModel;
 
 public class SignupPresenter implements SignUpPresenterInterface {
 
-    private RepositoryFirebaseInterface _repo;
+    private RepositoryFirebaseInterface repo;
 
     private SignUpViewInterface _view;
 
-    public SignupPresenter(RepositoryFirebaseInterface _repo){
-        this._repo = _repo;
+    public SignupPresenter(RepositoryFirebaseInterface repo){
+        this.repo = repo;
 
     }
 
@@ -27,18 +27,18 @@ public class SignupPresenter implements SignUpPresenterInterface {
 
     @Override
     public void addUserData(UserModel userModel) {
-        _repo.signUpWithCreateEmail(userModel);
+        repo.signUpWithCreateEmail(userModel);
     }
 
 
     @Override
     public void saveUserData(UserModel userModel) {
-        _repo.saveUserData(userModel);
+        repo.saveUserData(userModel);
     }
 
 
     @Override
     public boolean isUserExists(UserModel userModel) {
-        return _repo.isUserExists(userModel);
+        return repo.isUserExists(userModel);
     }
 }

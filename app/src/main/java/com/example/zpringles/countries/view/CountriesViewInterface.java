@@ -1,6 +1,6 @@
 package com.example.zpringles.countries.view;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 

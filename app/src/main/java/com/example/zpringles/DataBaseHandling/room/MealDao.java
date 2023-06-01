@@ -5,7 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 

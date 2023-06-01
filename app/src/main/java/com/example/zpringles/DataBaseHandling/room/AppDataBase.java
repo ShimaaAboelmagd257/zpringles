@@ -7,7 +7,7 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 
 @Database(entities = {MealModel.class}, version = 1)

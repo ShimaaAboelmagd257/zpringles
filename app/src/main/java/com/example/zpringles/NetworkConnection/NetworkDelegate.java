@@ -1,9 +1,9 @@
 package com.example.zpringles.NetworkConnection;
 
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 

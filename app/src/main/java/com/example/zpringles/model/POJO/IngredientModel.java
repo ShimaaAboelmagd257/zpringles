@@ -1,4 +1,4 @@
-package com.example.zpringles.model;
+package com.example.zpringles.model.POJO;
 
 public class IngredientModel {
     String name;

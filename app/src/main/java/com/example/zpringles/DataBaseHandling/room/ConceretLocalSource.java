@@ -3,7 +3,7 @@ package com.example.zpringles.DataBaseHandling.room;
 import android.content.Context;
 import android.database.sqlite.SQLiteConstraintException;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.example.zpringles.search.presenter;
 
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 public interface SearchPresenterInterface {
 

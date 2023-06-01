@@ -1,4 +1,4 @@
-package com.example.zpringles.model.retrofit;
+package com.example.zpringles.model.POJO;
 
 public class Category {
 

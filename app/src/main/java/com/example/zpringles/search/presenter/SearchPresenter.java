@@ -1,10 +1,10 @@
 package com.example.zpringles.search.presenter;
 
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.RepositoryInterface;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
 import com.example.zpringles.search.view.SearchViewInterface;
 

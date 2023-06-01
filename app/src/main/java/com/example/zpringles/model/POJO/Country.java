@@ -1,6 +1,4 @@
-package com.example.zpringles.model.retrofit;
-
-import java.io.Serializable;
+package com.example.zpringles.model.POJO;
 
 public class Country {
 

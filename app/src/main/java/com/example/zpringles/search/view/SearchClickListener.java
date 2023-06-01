@@ -1,7 +1,7 @@
 package com.example.zpringles.search.view;
 
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 public interface SearchClickListener {
 

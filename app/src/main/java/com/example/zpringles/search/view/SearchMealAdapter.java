@@ -20,7 +20,7 @@ import com.bumptech.glide.request.RequestOptions;
 import com.example.zpringles.R;
 import com.example.zpringles.Authantication.signup.view.SignupActivity;
 import com.example.zpringles.itemPage.view.ItemPageActivity;
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.example.zpringles.utalites.Helper;
 
 import java.util.List;

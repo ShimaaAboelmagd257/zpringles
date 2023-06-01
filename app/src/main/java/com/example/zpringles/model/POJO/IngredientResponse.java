@@ -1,6 +1,4 @@
-package com.example.zpringles.model.retrofit;
-
-import com.example.zpringles.model.retrofit.Ingredient;
+package com.example.zpringles.model.POJO;
 
 import java.util.List;
 

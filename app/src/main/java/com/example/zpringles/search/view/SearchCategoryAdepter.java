@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.zpringles.R;
-import com.example.zpringles.model.retrofit.Category;
+import com.example.zpringles.model.POJO.Category;
 
 import java.util.List;
 

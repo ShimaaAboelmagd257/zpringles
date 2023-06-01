@@ -1,4 +1,4 @@
-package com.example.zpringles.model;
+package com.example.zpringles.model.POJO;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import java.io.Serializable;

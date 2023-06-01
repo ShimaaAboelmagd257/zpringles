@@ -15,11 +15,11 @@ import com.example.zpringles.R;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
 import com.example.zpringles.home.home.presenter.HomePagePresenter;
 import com.example.zpringles.home.home.presenter.HomePresenter;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +36,7 @@ public  class HomePageFragment extends Fragment implements HomeViewInterface,OnH
     LinearLayoutManager mealLayoutManager, CategorieLayoutManager,countryLayoutManager;
     RecycleCountryAdepter recycleCountryAdepter;
     RecycleCategoryAdepter recycleCategoryAdepter;
-    ViewPagerAdepter viewPagerAdepter;
+    RecyclerRandomAdapter recyclerRandomAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -62,13 +62,13 @@ public  class HomePageFragment extends Fragment implements HomeViewInterface,OnH
 
         recycleCountryAdepter = new RecycleCountryAdepter(view.getContext(),new ArrayList<Country>());
         recycleCategoryAdepter = new RecycleCategoryAdepter(view.getContext(),new ArrayList<Category>());
-         viewPagerAdepter = new ViewPagerAdepter(view.getContext(),new ArrayList<>(),this);
+        recyclerRandomAdapter = new RecyclerRandomAdapter(view.getContext(),new ArrayList<>(),this);
 
-        homePagePresenter=new HomePagePresenter(this, Repository.getInstance(APIResponse.getInstance(getContext()
+        homePagePresenter=new HomePagePresenter(this, Repository.getInstance(APIClient.getInstance(getContext()
         ), ConceretLocalSource.getInstance(getContext()),view.getContext()));
 
         mealRecyclerView.setLayoutManager(mealLayoutManager);
-        mealRecyclerView.setAdapter(viewPagerAdepter);
+        mealRecyclerView.setAdapter(recyclerRandomAdapter);
 
         category.setLayoutManager(CategorieLayoutManager);
         category.setAdapter(recycleCategoryAdepter);
@@ -115,8 +115,8 @@ public  class HomePageFragment extends Fragment implements HomeViewInterface,OnH
     }
     @Override
     public void ViewRandomMeal(List<MealModel> models) {
-        viewPagerAdepter.setViewPagerAdepterList(models);
-        viewPagerAdepter.notifyDataSetChanged();
+        recyclerRandomAdapter.setViewPagerAdepterList(models);
+        recyclerRandomAdapter.notifyDataSetChanged();
     }
 
     @Override

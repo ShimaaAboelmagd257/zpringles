@@ -18,11 +18,11 @@ import com.example.zpringles.R;
 import com.example.zpringles.DataBaseHandling.firebase.FirebaseSource;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
 import com.example.zpringles.DataBaseHandling.sharedpreference.SharedPreferenceSource;
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.example.zpringles.model.modelFirebase.RepositoryFirebase;
 import com.example.zpringles.model.modelFirebase.UserModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 import com.example.zpringles.planmeals.presenter.PlanMealsPresenter;
 import com.example.zpringles.planmeals.presenter.PlanPresenterInterface;
 import com.example.zpringles.utalites.Helper;
@@ -67,7 +67,7 @@ public class planMealsFragment extends Fragment implements OnPlanClickListner,On
 
         Init(view);
 
-        planPresenterInterface = new PlanMealsPresenter((Repository.getInstance(APIResponse.getInstance(getContext()),
+        planPresenterInterface = new PlanMealsPresenter((Repository.getInstance(APIClient.getInstance(getContext()),
                 ConceretLocalSource.getInstance(getContext()),getContext()))
                 , RepositoryFirebase.getInstance(FirebaseSource.getInstance(getContext())
                 , SharedPreferenceSource.getInstance(getContext()),getContext()));

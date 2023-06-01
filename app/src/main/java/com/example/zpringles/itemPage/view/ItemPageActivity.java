@@ -22,10 +22,10 @@ import com.example.zpringles.R;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
 import com.example.zpringles.itemPage.presenter.ItemPagePresenter;
 import com.example.zpringles.itemPage.presenter.ItemPagePresenterInterface;
-import com.example.zpringles.model.IngredientModel;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.POJO.IngredientModel;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 import com.example.zpringles.utalites.Helper;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -75,7 +75,7 @@ public class ItemPageActivity extends AppCompatActivity implements ItemViewInter
 
         }
         init();
-        pagepresenter=new ItemPagePresenter(this, Repository.getInstance(APIResponse.getInstance(this), ConceretLocalSource.getInstance(ItemPageActivity.this),ItemPageActivity.this));
+        pagepresenter=new ItemPagePresenter(this, Repository.getInstance(APIClient.getInstance(this), ConceretLocalSource.getInstance(ItemPageActivity.this),ItemPageActivity.this));
         pagepresenter.getMealItem(mealNameItem);
 
 

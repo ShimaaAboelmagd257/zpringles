@@ -3,13 +3,13 @@ package com.example.zpringles.categories.presenter;
 import com.example.zpringles.categories.view.CategoriesViewInterface;
 import com.example.zpringles.categories.view.CategoryFragment;
 
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.RepositoryInterface;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
-import com.example.zpringles.model.retrofit.Repository;
+import com.example.zpringles.model.Repository;
 
 import java.util.List;
 

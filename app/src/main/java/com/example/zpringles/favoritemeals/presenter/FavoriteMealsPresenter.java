@@ -1,13 +1,9 @@
 package com.example.zpringles.favoritemeals.presenter;
 
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.Observer;
-
-import com.example.zpringles.favoritemeals.view.FavViewInterface;
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.example.zpringles.model.modelFirebase.RepositoryFirebaseInterface;
 import com.example.zpringles.model.modelFirebase.UserModel;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.RepositoryInterface;
 
 import java.util.List;
 

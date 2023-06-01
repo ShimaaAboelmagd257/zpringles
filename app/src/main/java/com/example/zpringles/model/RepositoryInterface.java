@@ -1,6 +1,6 @@
-package com.example.zpringles.model.retrofit;
+package com.example.zpringles.model;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
 import com.example.zpringles.home.home.presenter.HomePagePresenter;
 

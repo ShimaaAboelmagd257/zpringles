@@ -10,15 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.zpringles.R;
 
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Country;
+import com.example.zpringles.model.POJO.Country;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -18,12 +18,12 @@ import android.widget.Toast;
 
 import com.example.zpringles.R;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 import com.example.zpringles.search.presenter.SearchPresenter;
 import com.example.zpringles.search.presenter.SearchPresenterInterface;
 
@@ -79,7 +79,7 @@ public class SearchFragment extends Fragment implements SearchClickListener,Sear
         super.onViewCreated(view, savedInstanceState);
         init (view);
 
-        searchPresenterInterface = new SearchPresenter(this ,Repository.getInstance(APIResponse.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),getContext()));
+        searchPresenterInterface = new SearchPresenter(this ,Repository.getInstance(APIClient.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),getContext()));
 
         layoutManager=new GridLayoutManager(getContext(),2);
 

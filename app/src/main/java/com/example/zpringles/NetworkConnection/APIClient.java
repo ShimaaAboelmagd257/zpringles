@@ -2,11 +2,11 @@ package com.example.zpringles.NetworkConnection;
 
 import android.content.Context;
 
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.MealModelResponse;
-import com.example.zpringles.model.retrofit.CategoryResponse;
-import com.example.zpringles.model.retrofit.CountryResponse;
-import com.example.zpringles.model.retrofit.IngredientResponse;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.MealModelResponse;
+import com.example.zpringles.model.POJO.CategoryResponse;
+import com.example.zpringles.model.POJO.CountryResponse;
+import com.example.zpringles.model.POJO.IngredientResponse;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,13 +22,13 @@ import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class APIResponse implements RemoteSource{
+public class APIClient implements RemoteSource{
 
     public static final String url="https://www.themealdb.com/api/json/v1/1/";
-   MealService mealService;
-    private static APIResponse apiResponse = null;
+   APIService mealService;
+    private static APIClient apiResponse = null;
 
-    public APIResponse(Context context) {
+    public APIClient(Context context) {
 
         File cacheDirectory = new File(context.getCacheDir(), "offline_cache_directory");
         Cache cache = new Cache(cacheDirectory,100 *1024 * 1024);
@@ -44,15 +44,15 @@ public class APIResponse implements RemoteSource{
 
         Retrofit retrofit = retrofitB.build();
 
-        mealService = retrofit.create(MealService.class);
+        mealService = retrofit.create(APIService.class);
 
 
     }
 
-    public static APIResponse getInstance(Context context){
+    public static APIClient getInstance(Context context){
 
         if (apiResponse == null){
-            apiResponse = new APIResponse(context);
+            apiResponse = new APIClient(context);
         }
 
         return apiResponse;

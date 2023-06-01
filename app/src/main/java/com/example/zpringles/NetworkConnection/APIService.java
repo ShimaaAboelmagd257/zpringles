@@ -1,16 +1,16 @@
 package com.example.zpringles.NetworkConnection;
 
-import com.example.zpringles.model.retrofit.CategoryResponse;
-import com.example.zpringles.model.retrofit.CountryResponse;
-import com.example.zpringles.model.retrofit.IngredientResponse;
-import com.example.zpringles.model.MealModelResponse;
+import com.example.zpringles.model.POJO.CategoryResponse;
+import com.example.zpringles.model.POJO.CountryResponse;
+import com.example.zpringles.model.POJO.IngredientResponse;
+import com.example.zpringles.model.POJO.MealModelResponse;
 
 import io.reactivex.rxjava3.core.Flowable;
 import io.reactivex.rxjava3.core.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface MealService {
+public interface APIService {
     @GET("random.php")
     Flowable<MealModelResponse> getRandomMeals();
 

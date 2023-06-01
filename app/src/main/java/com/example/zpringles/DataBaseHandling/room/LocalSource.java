@@ -1,7 +1,7 @@
 package com.example.zpringles.DataBaseHandling.room;
 
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 

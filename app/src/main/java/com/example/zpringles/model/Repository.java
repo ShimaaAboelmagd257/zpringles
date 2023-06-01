@@ -1,14 +1,14 @@
-package com.example.zpringles.model.retrofit;
+package com.example.zpringles.model;
 
 import android.content.Context;
 
 import com.example.zpringles.DataBaseHandling.room.LocalSource;
 import com.example.zpringles.home.home.presenter.HomePagePresenter;
-import com.example.zpringles.model.MealModel;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
 import com.example.zpringles.NetworkConnection.RemoteSource;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.NetworkConnection.APIClient;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 
@@ -30,7 +30,7 @@ public class Repository implements RepositoryInterface{
 
     }
 
-    public static Repository getInstance(APIResponse remoteSource, ConceretLocalSource localSource, Context context){
+    public static Repository getInstance(APIClient remoteSource, ConceretLocalSource localSource, Context context){
         if (repository == null){
             repository = new Repository(remoteSource,localSource,context);
         }

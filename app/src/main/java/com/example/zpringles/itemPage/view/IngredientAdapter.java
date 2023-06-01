@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.zpringles.R;
-import com.example.zpringles.model.IngredientModel;
+import com.example.zpringles.model.POJO.IngredientModel;
 
 import java.util.List;
 

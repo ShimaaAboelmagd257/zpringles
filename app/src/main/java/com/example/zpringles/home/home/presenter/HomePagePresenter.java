@@ -2,11 +2,11 @@ package com.example.zpringles.home.home.presenter;
 
 import com.example.zpringles.home.home.view.HomeViewInterface;
 
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.RepositoryInterface;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
 
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.List;
 public class HomePagePresenter implements NetworkDelegate ,HomePresenter {
 
     HomeViewInterface _view;
-    RepositoryInterface _repo;
+    RepositoryInterface repo;
 
     public HomePagePresenter(HomeViewInterface view, RepositoryInterface repo){
-        this._repo=repo;
+        this.repo=repo;
         this._view=view;
 
     }
@@ -49,26 +49,26 @@ public class HomePagePresenter implements NetworkDelegate ,HomePresenter {
 
     @Override
     public void getRandomMeal() {
-            _repo.getRandomMeal(this);
+        repo.getRandomMeal(this);
     }
 
     @Override
     public void getCountriesList() {
-            _repo.getAllCountries(this);
+        repo.getAllCountries(this);
     }
 
     @Override
     public void getCategoriesList() {
-        _repo.getAllCategories(this);
+        repo.getAllCategories(this);
     }
 
     @Override
     public void addToFavorite(MealModel mealModel) {
-        _repo.insertFavorite(mealModel);
+        repo.insertFavorite(mealModel);
     }
 
     @Override
     public void insertDataInRoom(MealModel mealModel) {
-        _repo.insertDataInRoom(mealModel);
+        repo.insertDataInRoom(mealModel);
     }
 }

@@ -1,5 +1,6 @@
-package com.example.zpringles.model;
+package com.example.zpringles.model.POJO;
 
+import com.example.zpringles.model.POJO.MealModel;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;

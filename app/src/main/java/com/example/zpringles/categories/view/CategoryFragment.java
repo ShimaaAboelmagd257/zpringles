@@ -18,9 +18,9 @@ import com.example.zpringles.R;
 import com.example.zpringles.categories.presenter.CategoriesPresenter;
 import com.example.zpringles.categories.presenter.CategoriesPresenterInterface;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,14 +53,13 @@ public class CategoryFragment extends Fragment implements CategoriesViewInterfac
         super.onViewCreated(view, savedInstanceState);
 
         init(view);
-       // categoryMealName = CategoryFragmentArgs.fromBundle(getArguments()).getCMealName();
         if (categoryMealName != null) {
             textView.setText(categoryMealName);
         }
 
 
         gridLayoutManager=new GridLayoutManager(getContext(),2);
-        categoriesPresenter=new CategoriesPresenter(this, Repository.getInstance(APIResponse.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),view.getContext()));
+        categoriesPresenter=new CategoriesPresenter(this, Repository.getInstance(APIClient.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),view.getContext()));
         recyclerCategoriesAdapter=new RecyclerCategoriesAdapter(getContext(),new ArrayList<>(),this);
         recyclerView.setAdapter(recyclerCategoriesAdapter);
         recyclerView.setLayoutManager(gridLayoutManager);

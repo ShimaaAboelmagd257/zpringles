@@ -1,9 +1,9 @@
 package com.example.zpringles.home.home.view;
 
 
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
 
 import java.util.List;
 

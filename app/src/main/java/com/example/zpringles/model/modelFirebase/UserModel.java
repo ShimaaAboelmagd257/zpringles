@@ -1,6 +1,6 @@
 package com.example.zpringles.model.modelFirebase;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 import java.util.List;

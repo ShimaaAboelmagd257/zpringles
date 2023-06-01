@@ -1,7 +1,7 @@
 package com.example.zpringles.home.home.presenter;
 
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 public interface HomePresenter {
     void getRandomMeal();

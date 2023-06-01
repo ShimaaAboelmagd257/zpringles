@@ -1,11 +1,11 @@
 package com.example.zpringles.itemPage.presenter;
 
 import com.example.zpringles.itemPage.view.ItemViewInterface;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Category;
-import com.example.zpringles.model.retrofit.Country;
-import com.example.zpringles.model.retrofit.Ingredient;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.POJO.Category;
+import com.example.zpringles.model.POJO.Country;
+import com.example.zpringles.model.POJO.Ingredient;
+import com.example.zpringles.model.RepositoryInterface;
 import com.example.zpringles.NetworkConnection.NetworkDelegate;
 
 import java.util.List;
@@ -31,7 +31,7 @@ public class ItemPagePresenter implements ItemPagePresenterInterface, NetworkDel
 
     @Override
     public void onSuccessMeals(List<MealModel> mealModels) {
-        System.out.println("<<<<<<<<<<<<<<<<onSuccessMeals>>>>>>>>>>>>");
+
         _view.ViewMealItem(mealModels);
 
     }

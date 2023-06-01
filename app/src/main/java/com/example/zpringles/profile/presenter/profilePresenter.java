@@ -2,7 +2,7 @@ package com.example.zpringles.profile.presenter;
 
 import com.example.zpringles.model.modelFirebase.RepositoryFirebaseInterface;
 import com.example.zpringles.model.modelFirebase.UserModel;
-import com.example.zpringles.model.retrofit.RepositoryInterface;
+import com.example.zpringles.model.RepositoryInterface;
 import com.example.zpringles.profile.view.ProfileViewInterface;
 
 public class profilePresenter implements profilePresenterInterface{

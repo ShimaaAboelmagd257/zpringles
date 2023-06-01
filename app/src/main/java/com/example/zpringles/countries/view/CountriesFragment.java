@@ -18,9 +18,9 @@ import com.example.zpringles.R;
 import com.example.zpringles.countries.presenter.CountriesPresenter;
 import com.example.zpringles.countries.presenter.CountriesPresenterInterface;
 import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
-import com.example.zpringles.model.MealModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.POJO.MealModel;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,12 +29,13 @@ public class CountriesFragment extends Fragment implements CountriesViewInterfac
 
     RecyclerView recyclerView;
     TextView textView ;
-    String CountryName;
     RecyclerCountriesAdapter recyclerCountriesAdapter;
-
     CountriesPresenterInterface countriesPresenter;
 
     GridLayoutManager gridLayoutManager;
+    String CountryName;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,13 +52,12 @@ public class CountriesFragment extends Fragment implements CountriesViewInterfac
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         init(view);
-         //CountryName =CountriesFragmentArgs.fromBundle(getArguments()).getMealName();
         if (CountryName != null) {
             textView.setText(CountryName);
         }
 
         gridLayoutManager=new GridLayoutManager(getContext(),2);
-        countriesPresenter=new CountriesPresenter(this, Repository.getInstance(APIResponse.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),view.getContext()));
+        countriesPresenter=new CountriesPresenter(this, Repository.getInstance(APIClient.getInstance(getContext()), ConceretLocalSource.getInstance(getContext()),view.getContext()));
         recyclerCountriesAdapter=new RecyclerCountriesAdapter(getContext(),new ArrayList<>(),this);
         recyclerView.setAdapter(recyclerCountriesAdapter);
         recyclerView.setLayoutManager(gridLayoutManager);

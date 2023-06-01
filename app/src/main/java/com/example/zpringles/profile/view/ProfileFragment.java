@@ -30,8 +30,8 @@ import com.example.zpringles.DataBaseHandling.room.ConceretLocalSource;
 import com.example.zpringles.DataBaseHandling.sharedpreference.SharedPreferenceSource;
 import com.example.zpringles.model.modelFirebase.RepositoryFirebase;
 import com.example.zpringles.model.modelFirebase.UserModel;
-import com.example.zpringles.model.retrofit.Repository;
-import com.example.zpringles.NetworkConnection.APIResponse;
+import com.example.zpringles.model.Repository;
+import com.example.zpringles.NetworkConnection.APIClient;
 import com.example.zpringles.profile.presenter.profilePresenter;
 import com.example.zpringles.profile.presenter.profilePresenterInterface;
 import com.example.zpringles.utalites.Helper;
@@ -77,7 +77,7 @@ public class ProfileFragment extends Fragment implements ProfileViewInterface , 
         init(view);
 
         profilePresenterInterface = new profilePresenter(RepositoryFirebase.getInstance(FirebaseSource.getInstance(getContext())
-                , SharedPreferenceSource.getInstance(getContext()), getContext()), Repository.getInstance(APIResponse.getInstance(getContext()),
+                , SharedPreferenceSource.getInstance(getContext()), getContext()), Repository.getInstance(APIClient.getInstance(getContext()),
                         ConceretLocalSource.getInstance(getContext()),getContext()));
 
         editProfile.setOnClickListener(event -> editProfile());

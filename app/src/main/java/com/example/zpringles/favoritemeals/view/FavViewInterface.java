@@ -1,9 +1,7 @@
 package com.example.zpringles.favoritemeals.view;
 
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 import com.example.zpringles.model.modelFirebase.UserModel;
-
-import java.util.List;
 
 public interface FavViewInterface {
     void removeFromFav(MealModel meal);

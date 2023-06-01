@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -18,7 +17,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.zpringles.R;
 import com.example.zpringles.itemPage.view.ItemPageActivity;
-import com.example.zpringles.model.MealModel;
+import com.example.zpringles.model.POJO.MealModel;
 
 import java.util.List;
 
@@ -28,10 +27,25 @@ public class FavoriteMealsAdapter extends RecyclerView.Adapter<FavoriteMealsAdap
     Context context;
     List<MealModel> model;
     OnFavClickListner onFavClickListner;
+
+
     public FavoriteMealsAdapter(Context context, List<MealModel> mealModelList,OnFavClickListner onFavClickListner){
         this.context=context;
         this.model=mealModelList;
         this.onFavClickListner = onFavClickListner;
+    }
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView meal_name;
+        CircleImageView meal_image;
+        ImageButton remove_from_fav;
+        CardView item;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            meal_name =itemView.findViewById(R.id.ingredient_meal_name);
+            meal_image =itemView.findViewById(R.id.profileUserImage);
+            remove_from_fav =itemView.findViewById(R.id.remove_from_fav);
+            item=itemView.findViewById(R.id.favoriteItemCard);
+        }
     }
     @NonNull
     @Override
@@ -85,18 +99,6 @@ public class FavoriteMealsAdapter extends RecyclerView.Adapter<FavoriteMealsAdap
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView meal_name;
-        CircleImageView meal_image;
-        ImageButton remove_from_fav;
-        CardView item;
-        public ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            meal_name =itemView.findViewById(R.id.ingredient_meal_name);
-            meal_image =itemView.findViewById(R.id.profileUserImage);
-            remove_from_fav =itemView.findViewById(R.id.remove_from_fav);
-            item=itemView.findViewById(R.id.favoriteItemCard);
-        }
-    }
+
 }
 
