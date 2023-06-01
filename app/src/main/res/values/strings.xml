@@ -54,6 +54,9 @@
     <string name="favorite">Favorite</string>
     <string name="EnteryourEmail">Enter your Email</string>
     <string name="nav_host_fragment">nav_host_fragment</string>
+    <string name="login2">"  login"</string>
+    <string name="PlanMeal">Plan Your Meal</string>
+    <string name="Zpringles">" Zpringles"</string>
 
     <string-array name="weekdays">
         <item>Saturday</item>

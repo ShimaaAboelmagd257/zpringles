@@ -5,7 +5,7 @@
     android:id="@+id/favoriteItemCard"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardBackgroundColor="@color/itemBG"
+    app:cardBackgroundColor="@color/material_dynamic_tertiary90"
     app:cardCornerRadius="10dp"
     app:cardElevation="4dp"
     app:cardMaxElevation="4dp"

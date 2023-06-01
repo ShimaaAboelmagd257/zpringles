@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "312540254668",
+    "firebase_url": "https://springles-f646d-default-rtdb.firebaseio.com",
     "project_id": "springles-f646d",
     "storage_bucket": "springles-f646d.appspot.com"
   },
@@ -14,36 +15,7 @@
       },
       "oauth_client": [
         {
-          "client_id": "312540254668-3mj9dholp1bic1sck7j84718401dgt7a.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAnezxHkBId6G0F7GLssCKaapdNW7_m7VA"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "312540254668-3mj9dholp1bic1sck7j84718401dgt7a.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:312540254668:android:e2725d73c05bebe4488d69",
-        "android_client_info": {
-          "package_name": "com.examples.springles"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "312540254668-3mj9dholp1bic1sck7j84718401dgt7a.apps.googleusercontent.com",
+          "client_id": "312540254668-hje9pqu8uk7o7oinka2ghb9hkq4fkuhl.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

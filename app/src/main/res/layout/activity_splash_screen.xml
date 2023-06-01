@@ -23,31 +23,31 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="265dp"
-        android:layout_height="74dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="302dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="92dp"
         android:fontFamily="cursive"
-        android:text="@string/appname"
+        android:text="   Zpringles"
         android:textColor="#000000"
         android:textSize="54sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.787"
+        app:layout_constraintHorizontal_bias="0.605"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animationView" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="329dp"
-        android:layout_height="83dp"
+        android:layout_width="357dp"
+        android:layout_height="84dp"
         android:fontFamily="cursive"
-        android:text="Plan your meal"
+        android:text="@string/PlanMeal"
         android:textColor="#000000"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.109" />
+        app:layout_constraintVertical_bias="0.206" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
